@@ -15,13 +15,5 @@ jobs:
       - name: Get deps
         run: ./ci.sh deps
 
-      - name: Deploy builder
-        env:
-          LLVM_NAME: ${{ secrets.LLVM_NAME}}
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
-          GH_USERNAME: ${{ secrets.GH_USERNAME }}
-          GH_EMAIL: ${{ secrets.GH_EMAIL }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_PUSH_REPO_URL: ${{ secrets.GH_PUSH_REPO_URL }}
+      - name: Get deps
         run: ./build-tc.sh
